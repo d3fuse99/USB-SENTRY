@@ -1,6 +1,7 @@
 <h1>USB-SENTRY 🛡️</h1>
 
-<img src="https://raw.githubusercontent.com/d3fuse99/USB-SENTRY/main/screenshot.png" alt="USB-Sentry Console UI" width="100%" />
+<img width="2559" height="1318" alt="image" src="https://github.com/user-attachments/assets/40627679-1e03-4663-afcb-01581c5f5d8a" />
+
 
 **Windows USB forensics analyzer, live monitor, and active whitelist controller.**
 
