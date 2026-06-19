@@ -1,36 +1,28 @@
-USB-Sentry
-==========
+<h1>USB-SENTRY 🛡️</h1>
 
-Forensic and Security Monitoring Framework for Windows USB Storage History.
+<img src="https://raw.githubusercontent.com/d3fuse99/USB-SENTRY/main/screenshot.png" alt="USB-Sentry Console UI" width="100%" />
 
-This project scans, visualizes, and monitors historically connected USB mass storage devices from the Windows registry, correlating them with an authorized whitelist to detect potentially unverified or hostile hardware (such as Rubber Ducky or untrusted flash drives).
+**Windows USB forensics analyzer, live monitor, and active whitelist controller.**
 
-Project Architecture
---------------------
+USB-SENTRY is a lightweight, zero-dependency host forensics and access control tool designed to inspect, identify, and authorize external mass storage devices. It extracts deep registry artifacts under high-risk hardware nodes, visualizes connection history chronologically, and helps secure hosts against unauthorized USB threat vectors (like BadUSB or malicious flash drives).
 
-* server.py - Entry script hosting the HTTP dispatch server.
-* scanner.py - Forensic analyzer query engine mapping active registries.
-* db.py - Local persistent store tracking trusted hardware authorizations.
-* index.html - Application root markup layout.
-* style.css - Clean high-tech cyber-ops styling sheet.
-* app.js - Security-hardened operations application controller.
+---
 
-Key Features
-------------
+<h2>Features</h2>
 
-* Automated Registry Analysis - Scans HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USBSTOR for hardware connection history.
-* Safe Dynamic DOM Rendering - Replaced legacy HTML inner injection sinks with safe modern DOM elements, completely eliminating XSS vulnerability classes.
-* Graceful Simulation Fallback - Automatically falls back to high-fidelity simulation on non-Windows hosts or clean environments lacking USBSTOR records.
-* Access Control Matrix - Whitelist management console storing trusted state signatures locally.
+* **Automated Forensic Parsing**: Extracts deep registry records under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USBSTOR.
+* **Precise Timeline Extraction**: Decodes Windows 64-bit FILETIME connection timestamps to present an exact chronological ledger.
+* **Zero-Dependency Light Footprint**: Formulated strictly with native Python 3 standard modules and raw HTML5/CSS3/ES6 JS.
+* **Dynamic Cyber-Ops Console**: Visually stunning dashboard tracking active database metrics, whitelists, and real-time security alerts.
+* **XSS-Hardened Execution**: Programmatically renders DOM nodes to bypass unsafe innerHTML sinks, protecting administrators against script injection.
+* **High-Fidelity Simulation Fallback**: Auto-detects virtual machines or clean environments without hardware history and provisions high-fidelity simulation entries for diagnostics.
 
-Deployment and Usage
---------------------
+---
 
-1. Save all project files into a single directory on your machine.
-2. Spin up the local HTTP web server by running the entry script:
+<h2>How to run</h2>
 
+1. **Administrative Access**: Open **PowerShell** (or Windows Terminal) as an **Administrator** (optional, recommended for raw system registry queries).
+2. **Launch Controller**: Run the backend daemon from the project directory:
+
+   ```bash
    python server.py
-
-3. Open your favorite web browser and navigate to the local portal:
-
-   http://127.0.0.1:9090
