@@ -1,29 +1,32 @@
 <h1>USB-SENTRY 🛡️</h1>
 
-<img width="2559" height="1318" alt="image" src="https://github.com/user-attachments/assets/40627679-1e03-4663-afcb-01581c5f5d8a" />
+<img width="2553" height="1323" alt="image" src="https://github.com/user-attachments/assets/3083e3b7-1a72-4449-afca-77b3646b55d3" />
 
-**Windows USB forensics analyzer, live monitor, and active whitelist controller.**
 
-USB-SENTRY is a lightweight, zero-dependency host forensics and access control tool designed to inspect, identify, and authorize external mass storage devices. It extracts deep registry artifacts under high-risk hardware nodes, visualizes connection history chronologically, and helps secure hosts against unauthorized USB threat vectors (like BadUSB or malicious flash drives).
+**Zero-dependency forensic analyzer, dynamic live monitor, and active hardware lockout controller.**
+
+USB-SENTRY is a high-performance host security and forensics framework built to inspect, audit, and actively protect Windows ports. Operating under a default-deny security model, it locks down physical connections, logs forensic metadata chronologically, and provides Just-In-Time (JIT) temporal authorization controls secured by a cryptographically signed database.
 
 ---
 
 <h2>Features</h2>
 
-* **Extended Hardware Support**: Scans both USBSTOR (mass storage) and USB controller nodes, tracking keyboards, webcams, and BadUSB emulators.
-* **Dual Forensic Timestamps**: Decodes and displays both the very first connection time (extracted from SetupAPI system logs) and the last modified write time.
-* **Real-Time Toast Alerts**: Instantly fires beautiful sliding breach alerts on the web dashboard upon unauthorized device insertions.
-* **Cryptographically Secured Whitelist**: Uses SHA-256 signatures salted with a local machine key to prevent manual database tampering.
-* **Zero-Dependency Light Footprint**: Formulated strictly with native Python 3 standard modules and raw HTML5/CSS3/ES6 JS.
-* **XSS-Hardened Execution**: Programmatically renders DOM nodes to bypass unsafe innerHTML sinks, protecting administrators against script injection.
-* **High-Fidelity Simulation Fallback**: Auto-detects virtual machines or clean environments without hardware history and provisions high-fidelity simulation entries for diagnostics.
+* **Broad Hardware Auditing**: Parses both USBSTOR and USB controller nodes, tracking flash drives, keyloggers, BadUSBs, and general HID devices.
+* **Dual Forensic Timestamps**: Decodes 64-bit Windows FILETIME last-connection metrics and parses system SetupAPI logs to locate the exact first connection event.
+* **Active Threat Mitigation**: Runs an elevated background monitor thread that programmatically disables unauthorized PnP hardware instantly via Windows Defender-level controls.
+* **Just-In-Time (JIT) Override**: Locks down ports by default. Authorized administrators can unlock the host temporarily (for 2, 5, or 15 minutes) with automated graceful relocking.
+* **Instant Manual Re-locking**: Allows the administrator to instantly arm the security daemon early by clicking the green unlocked state button.
+* **Visual Security Log Console**: Accumulates and renders a chronological audit log in a real-time event journal (logs.json) directly on the dashboard.
+* **Credential Hardening & UX**: Formulates a stylish eye-toggle password visibility button, live Caps Lock detection, and automatic Cyrillic layout (RU/UA) alerts.
+* **Cryptographically Secured Database**: Salts whitelisted signatures with a machine-specific key file (secret.key) and stores irreversible SHA-256 hashes to prevent manual database tampering.
+* **Real-Time Toast Alerts**: Fires dynamic sliding HTML5 breach alerts on the screen the moment an unauthorized connection is attempted.
 
 ---
 
 <h2>How to run</h2>
 
-1. **Administrative Access**: Open **PowerShell** (or Windows Terminal) as an **Administrator** (optional, recommended for raw system registry queries).
-2. **Launch Controller**: Run the backend daemon from the project directory:
+1. **Elevate Privileges**: Open **PowerShell** (or Windows Terminal) as an **Administrator** (necessary for automated device-disabling countermeasures).
+2. **Launch Controller**: Spin up the backend daemon from the workspace:
 
    ```bash
    python server.py
