@@ -1,5 +1,7 @@
 # USB-SENTRY 🛡️⚡
 > **Host-Level USB Forensic Analyzer, Active Mitigation Daemon & Access Control Panel**
+<img width="2548" height="1320" alt="изображение" src="https://github.com/user-attachments/assets/bcf8ffff-7e26-40da-b829-c06c49028f8b" />
+<img width="2551" height="1327" alt="изображение" src="https://github.com/user-attachments/assets/61605211-4aba-4d78-ae23-8e9be00d80ec" />
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg?style=flat-square&logo=python)](https://www.python.org/)
 [![Platform Windows](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011-0078D6.svg?style=flat-square&logo=windows)](https://microsoft.com/windows)
