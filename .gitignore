@@ -1,3 +1,27 @@
+# Security, Keys & Master Credentials
 secret.key
-whitelist.json
+password.hash
+
+# Local Run Logs & System State
+logs.json
+
+# Python artifacts & virtual environments
 __pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+*.env
+
+# Operating System & IDE junk
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary / Scratchpad files
+Paste*
+*.tmp
+*.bak
